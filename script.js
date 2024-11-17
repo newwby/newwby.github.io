@@ -10,6 +10,9 @@ async function lookupCCG() {
         return;
     }
 
+
+    resultsDiv.textContent = `The CCG for postcode is... unknown! Dev hasn't implemented this function yet!`;
+    <!--   
     try {
         // Fetch the data from the local JSON file
         const response = await fetch('data.json');
@@ -17,9 +20,6 @@ async function lookupCCG() {
             throw new Error("Failed to load data");
         }
         const data = await response.json();
-
-        resultsDiv.textContent = `The CCG for postcode is... unknown! Dev hasn't implemented this function yet!`;
-      <!--   
         // Search for the matching CCG by postcode
         const match = data.find(entry => entry.postcode === postcode);
 
