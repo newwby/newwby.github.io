@@ -11,14 +11,25 @@ async function lookupCCGICB() {
     
     // otherwise do nothing because haven't sorted the lookup yet :')
     // resultsDiv.textContent = `The CCG for postcode is... unknown! Dev hasn't implemented this function yet!`;
-    var output = null
+    var is_valid = false
     // await so the promise resolves before trying to populate resultsDiv text
-    var fetch_string = 'https://api.postcodes.io/postcodes/'+encodeURIComponent(postcode.value)+'/validate'
-    var lookup = await fetch(fetch_string)
+    var fetch_string = 'https://api.postcodes.io/postcodes/'+encodeURIComponent(postcode.value)
+    var lookup = await fetch(fetch_string+'/validate')
         .then(response => response.json())
-        .then(data => output = data.result) // true or false
+        .then(data => is_valid = data.result) // true or false
         .catch(error => console.error('Error:', error));
     
-    resultsDiv.textContent = output
-    console.log(output, " ", fetch_string)
+    if (is_valid == true) {
+        var ccg_data
+        var ccg_fetch = await fetch(fetch_string)
+            .then(response => response.json())
+            .then(data => ccg_data = data.result)
+            .catch(error => console.error('Error:', error))
+        resultsDiv.innerHTML = "<b>CCG</b>: "+ccg_data.ccg+"<br>"
+        resultsDiv.innerHTML += "<b>Code</b>: "+ccg_data.codes.ccg_id
+        // console.log(ccg_data.ccg, ccg_data.codes.ccg_id)
+    }
+
+    // resultsDiv.textContent = is_valid
+    console.log(is_valid, " ", fetch_string)
 }
