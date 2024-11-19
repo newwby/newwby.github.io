@@ -11,17 +11,17 @@ async function lookupCCGICB() {
     
     // otherwise do nothing because haven't sorted the lookup yet :')
     // resultsDiv.textContent = `The CCG for postcode is... unknown! Dev hasn't implemented this function yet!`;
-    var is_valid = false
+    let is_valid = false
     // await so the promise resolves before trying to populate resultsDiv text
-    var fetch_string = 'https://api.postcodes.io/postcodes/'+encodeURIComponent(postcode.value)
-    var lookup = await fetch(fetch_string+'/validate')
+    let fetch_string = 'https://api.postcodes.io/postcodes/'+encodeURIComponent(postcode.value)
+    let lookup = await fetch(fetch_string+'/validate')
         .then(response => response.json())
         .then(data => is_valid = data.result) // true or false
         .catch(error => console.error('Error:', error));
     
     if (is_valid == true) {
-        var ccg_data
-        var ccg_fetch = await fetch(fetch_string)
+        let ccg_data
+        let ccg_fetch = await fetch(fetch_string)
             .then(response => response.json())
             .then(data => ccg_data = data.result)
             .catch(error => console.error('Error:', error))
