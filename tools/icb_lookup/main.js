@@ -20,6 +20,7 @@ async function lookupCCGICB() {
         .then(data => is_valid = data.result) // true or false
         .catch(error => console.error('Error:', error));
     
+    let results_output = ""
     if (is_valid == true) {
         let ccg_data
         let ccg_fetch = await fetch(fetch_string)
@@ -28,10 +29,11 @@ async function lookupCCGICB() {
             .catch(error => console.error('Error:', error))
         
         let ccg_code = ccg_data.codes.ccg_id
-        resultsDiv.innerHTML = "<b>CCG Name</b>: "+ccg_data.ccg
-        resultsDiv.innerHTML += "<br>"+"<b>CCG Code</b>: "+ccg_code
+        results_output += "<b>CCG Name</b>: "+ccg_data.ccg
+        results_output += "<br>"+"<b>CCG Code</b>: "+ccg_code
         // console.log(ccg_data.ccg, ccg_data.codes.ccg_id)
 
+        // todo add is-valid check
         let icb_data;
         await fetch('./ccg_to_icb.json')
         .then(response => response.json())
@@ -44,14 +46,16 @@ async function lookupCCGICB() {
         if (ccg_code in icb_data){
             let icb_code = icb_data[ccg_code]['ICB Code']
             let icb_name = icb_data[ccg_code]['ICB Name']
-            resultsDiv.innerHTML += "<br>"+"<b>ICB Name</b>: "+icb_name
-            resultsDiv.innerHTML += "<br>"+"<b>ICB Code</b>: "+icb_code
-            // console.log(true, " -> ", ccg_code, " -> ", )}
-        // else{
-        //     console.log(false, " -> ", ccg_code)}
-
-        // console.log(icb_data)
-        // console.log("icb data")
+            results_output += "<br>"+"<b>ICB Name</b>: "+icb_name
+            results_output += "<br>"+"<b>ICB Code</b>: "+icb_code
+            } else {
+            results_output += "<br>"+"missing ICB data - tell the developer to fix the database!"
+            }
+    
+    // outputting all at once results in no delay in displaying icb text (ccg waits for icb fetch)
+    
+    } else {
+    results_output = "Invalid postcode"
     }
-}
+    resultsDiv.innerHTML = results_output
 }
