@@ -1,0 +1,188 @@
+{
+    "9C": {
+      "CCG": "NHS North Tyneside CCG",
+      "ICB Code": "QHM",
+      "ICB Name": "NHS North East and North Cumbria Integrated Care Board"
+    },
+    "00L": {
+      "CCG": "NHS Northumberland CCG",
+      "ICB Code": "QHM",
+      "ICB Name": "NHS North East and North Cumbria Integrated Care Board"
+    },
+    "13T": {
+      "CCG": "NHS Newcastle Gateshead CCG (formed by merger in 2015)",
+      "ICB Code": "QHM",
+      "ICB Name": "NHS North East and North Cumbria Integrated Care Board"
+    },
+    "01H": {
+      "CCG": "NHS North Cumbria CCG",
+      "ICB Code": "QHM",
+      "ICB Name": "NHS North East and North Cumbria Integrated Care Board"
+    },
+    "00P": {
+      "CCG": "NHS Sunderland CCG",
+      "ICB Code": "QHM",
+      "ICB Name": "NHS North East and North Cumbria Integrated Care Board"
+    },
+    "00N": {
+      "CCG": "NHS South Tyneside CCG",
+      "ICB Code": "QHM",
+      "ICB Name": "NHS North East and North Cumbria Integrated Care Board"
+    },
+    "84H": {
+      "CCG": "NHS County Durham CCG (formed by merger in 2020)",
+      "ICB Code": "QHM",
+      "ICB Name": "NHS North East and North Cumbria Integrated Care Board"
+    },
+    "16C": {
+      "CCG": "NHS Tees Valley CCG (formed by merger in 2020)",
+      "ICB Code": "QHM",
+      "ICB Name": "NHS North East and North Cumbria Integrated Care Board"
+    },
+    "26A": {
+      "CCG": "NHS Norfolk and Waveney CCG",
+      "ICB Code": "QMM",
+      "ICB Name": "NHS Norfolk and Waveney Integrated Care Board"
+    },
+    "78H": {
+      "CCG": "NHS Northamptonshire CCG",
+      "ICB Code": "QPM",
+      "ICB Name": "NHS Northamptonshire Integrated Care Board"
+    },
+    "71E": {
+      "CCG": "NHS Lincolnshire CCG",
+      "ICB Code": "QJM",
+      "ICB Name": "NHS Lincolnshire Integrated Care Board"
+    },
+    "00Q": {
+      "CCG": "NHS Blackburn with Darwen CCG",
+      "ICB Code": "QE1",
+      "ICB Name": "NHS Lancashire and South Cumbria Integrated Care Board"
+    },
+    "00R": {
+      "CCG": "NHS Blackpool CCG",
+      "ICB Code": "QE2",
+      "ICB Name": "NHS Lancashire and South Cumbria Integrated Care Board"
+    },
+    "00X": {
+      "CCG": "NHS Chorley and South Ribble CCG",
+      "ICB Code": "QE3",
+      "ICB Name": "NHS Lancashire and South Cumbria Integrated Care Board"
+    },
+    "01A": {
+      "CCG": "NHS East Lancashire CCG",
+      "ICB Code": "QE4",
+      "ICB Name": "NHS Lancashire and South Cumbria Integrated Care Board"
+    },
+    "02M": {
+      "CCG": "NHS Fylde and Wyre CCG",
+      "ICB Code": "QE5",
+      "ICB Name": "NHS Lancashire and South Cumbria Integrated Care Board"
+    },
+    "01E": {
+      "CCG": "NHS Greater Preston CCG",
+      "ICB Code": "QE6",
+      "ICB Name": "NHS Lancashire and South Cumbria Integrated Care Board"
+    },
+    "01K": {
+      "CCG": "NHS Morecambe Bay CCG",
+      "ICB Code": "QE7",
+      "ICB Name": "NHS Lancashire and South Cumbria Integrated Care Board"
+    },
+    "02G": {
+      "CCG": "NHS West Lancashire CCG",
+      "ICB Code": "QE8",
+      "ICB Name": "NHS Lancashire and South Cumbria Integrated Care Board"
+    },
+    "11N": {
+      "CCG": "NHS Kernow CCG",
+      "ICB Code": "QT6",
+      "ICB Name": "NHS Cornwall and the Isles of Scilly Integrated Care Board"
+    },
+    "11M": {
+      "CCG": "NHS Gloucestershire CCG",
+      "ICB Code": "QR1",
+      "ICB Name": "NHS Gloucestershire Integrated Care Board"
+    },
+    "11X": {
+      "CCG": "NHS Somerset CCG",
+      "ICB Code": "QSL",
+      "ICB Name": "NHS Somerset Integrated Care Board"
+    },
+    "14L": {
+      "CCG": "NHS Manchester CCG (formed by merger in 2017; part of Manchester Health and Care Commissioning)",
+      "ICB Code": "QOP",
+      "ICB Name": "NHS Greater Manchester Integrated Care Board"
+    },
+    "01D": {
+      "CCG": "NHS Heywood, Middleton and Rochdale CCG",
+      "ICB Code": "QOP",
+      "ICB Name": "NHS Greater Manchester Integrated Care Board"
+    },
+    "00Y": {
+      "CCG": "NHS Oldham CCG",
+      "ICB Code": "QOP",
+      "ICB Name": "NHS Greater Manchester Integrated Care Board"
+    },
+    "01G": {
+      "CCG": "NHS Salford CCG",
+      "ICB Code": "QOP",
+      "ICB Name": "NHS Greater Manchester Integrated Care Board"
+    },
+    "01W": {
+      "CCG": "NHS Stockport CCG",
+      "ICB Code": "QOP",
+      "ICB Name": "NHS Greater Manchester Integrated Care Board"
+    },
+    "02A": {
+      "CCG": "NHS Trafford CCG",
+      "ICB Code": "QOP",
+      "ICB Name": "NHS Greater Manchester Integrated Care Board"
+    },
+    "01Y": {
+      "CCG": "NHS Tameside and Glossop CCG",
+      "ICB Code": "QOP",
+      "ICB Name": "NHS Greater Manchester Integrated Care Board"
+    },
+    "02H": {
+      "CCG": "NHS Wigan Borough CCG",
+      "ICB Code": "QOP",
+      "ICB Name": "NHS Greater Manchester Integrated Care Board"
+    },
+    "00T": {
+      "CCG": "NHS Bolton CCG",
+      "ICB Code": "QOP",
+      "ICB Name": "NHS Greater Manchester Integrated Care Board"
+    },
+    "00V": {
+      "CCG": "NHS Bury CCG",
+      "ICB Code": "QOP",
+      "ICB Name": "NHS Greater Manchester Integrated Care Board"
+    },
+    "n/a": {
+      "CCG": "not SBS client at present",
+      "ICB Code": "Greater Manchester Shared Services",
+      "ICB Name": "NHS Greater Manchester Integrated Care Board"
+    },
+    "11J": {
+      "CCG": "NHS Dorset CCG",
+      "ICB Code": "QVV",
+      "ICB Name": "NHS Dorset Integrated Care Board"
+    },
+    "15M": {
+      "CCG": "NHS Derby and Derbyshire CCG",
+      "ICB Code": "QJ2",
+      "ICB Name": "NHS Derby and Derbyshire Integrated Care Board"
+    },
+    "Y05": {
+      "CCG": "NHS North West London CCG",
+      "ICB Code": "QRV",
+      "ICB Name": "NHS North West London Integrated Care Board"
+    },
+    "01F": {
+      "CCG": "NHS Halton CCG",
+      "ICB Code": "QYG",
+      "ICB Name": "NHS Cheshire and Merseyside Integrated Care Board"
+    }
+  }
+  
