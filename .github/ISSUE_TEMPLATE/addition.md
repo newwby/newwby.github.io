@@ -13,7 +13,6 @@ assignees: newwby
 
 **Why is this feature desirable?**
 - Is this covered by existing functionality?
-- Is this universal enough to be considered part of the framework?
 - What use cases exist for this new feature?
 
 ---
