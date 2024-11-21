@@ -65,5 +65,11 @@ async function lookupCCGICB() {
     resultsDiv.innerHTML = results_output
 }
 
-
 window.onload = focusOnLoad()
+document.getElementById("postcode").addEventListener("keypress", function(event){
+    if (event.key === "Enter") {
+        // prevent any other behaviour from input event then click the lookup button
+        event.preventDefault();
+        document.getElementById("searchButton").click()
+    }
+    })
