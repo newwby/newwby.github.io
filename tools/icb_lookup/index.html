@@ -1,24 +1,34 @@
+<!-- Originally a CCG/ICB lookup tool developed as front-end practice, this page was entirely developed in VSCode (with local server) -->
+
 <!-- boilerplate -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CCG Lookup</title>
+    <title>Postcode Lookup</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <!-- do stuff below -->
 <body>
-    <!-- header text -->
-    <h1>CCG/ICB Lookup</h1>
-    <!-- inline search bar (text entry field and button attached to js script) -->
-    <div id="lookup-form">
-        <input type="text" id="postcode" placeholder="Enter postcode">
-        <button onclick="lookupCCGICB()">Search</button>
+    <div id="container">
+        <div id="pageHeader"></div>
+        <div id="mainBody">
+            <!-- header text -->
+            <h1>Postcode Lookup</h1>
+            <!-- inline search bar (text entry field and button attached to js script) -->
+            <div id="lookup-form">
+                <input type="text" id="postcode" placeholder="Please enter postcode, e.g. SW1A 2AA">
+                <div id="lookup-button">
+                    <button onclick="lookupCCGICB()" id="searchButton">Search</button>
+                </div>
+            </div>
+            <!-- blank div where js will output results -->
+            <div id="resultsDiv"></div>
+        </div>
+        <div id="pageFooter"></div>
     </div>
-    <!-- blank div where js will output results -->
-    <div id="resultsDiv"></div>
     <script src="main.js"></script>
 </body>
 </html>
