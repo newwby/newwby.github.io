@@ -1,3 +1,8 @@
+// make sure the postcode entry field is focused on page load
+function focusOnLoad() {
+    // postcode.focus()
+    document.getElementById("postcode").focus()
+}
 
 // func to take given postcode and return the associated CCG/ICB pair; fires on clicking button (onclick event)
 async function lookupCCGICB() {
@@ -59,3 +64,6 @@ async function lookupCCGICB() {
     }
     resultsDiv.innerHTML = results_output
 }
+
+
+window.onload = focusOnLoad()
