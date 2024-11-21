@@ -1,3 +1,5 @@
+# This file developed entirely in GitHub Codespaces
+
 import requests
 from bs4 import BeautifulSoup
 import pandas as pd
