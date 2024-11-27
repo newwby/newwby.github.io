@@ -10,7 +10,56 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<script>
+    /* Toggle between adding and removing the "responsive" class to navigation_bar when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("mynavigation_bar");
+  if (x.className === "navigation_bar") {
+    x.className += " responsive";
+  } else {
+    x.className = "navigation_bar";
+  }
+}
+</script>
+
+<body>  
+    <!-- TODO add dark mode, preserve user choice through cookies (cookie GDPR prompt that only appears on toggling if not shown before?) -->
+
+    <div id="root">
+        
+        <!-- Header should always be on screen -->
+        <div id="header">
+            <div class="navigation_bar" id="mynavigation_bar">
+                <a href="#home" class="active">Home</a>
+                <a href="#news">News</a>
+                <a href="#contact">Contact</a>
+                <div class="dropdown">
+                  <button class="dropbtn">Dropdown
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                  </div>
+                </div>
+                <a href="#about">About</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+              </div>
+        </div>
+
+        <!-- Main body should be a scrolling section containing the currently loaded content -->
+        <div id="main_body">
+
+        </div>
+
+        <!-- Footer should not always be on screen and be at bottom of main body, or always on screen? Maybe two footer variations? -->
+        <div id="footer">
+
+        </div>
+
+    </div>
+
     <h1>Portfolio Content Page</h1>
     <div id="indexBody">
         <p>
@@ -18,24 +67,37 @@
             <!-- Temporary line breaks until CSS added -->
             <div id="portfolioLists">
                 <br />
+                <!-- TODO generate this from a DB don't manually code it -->
+                
                 <!-- TODO upload CV -->
-                <h1><a href="">Daniel Newby CV</a></h1>
+                <!-- <h1><a href="">Daniel Newby CV</a></h1> -->
+
+                <!-- TODO Add LinkedIn link -->
 
                 <!-- Open source and public projects -->
-                <h1><a href="https://github.com/newwby">Git Repositories</a></h1>
+                <h1><a href="https://github.com/newwby">My GitHub</a></h1>
                 <ul><a href="https://github.com/newwby/newwby.github.io"><b>newwby.github.io</b></a> - <i>(this GitHub page!)</i></ul>
                 <ul><a href="https://github.com/newwby/Godot-Prototyping-Framework"><b>Godot Prototyping Framework</b></a> - <i>universal modules for Godot4</i></ul>
                 <ul><a href="https://github.com/newwby/Godoct"><b>Godoct</b></a> - <i>documentation generator for Godot projects</i></ul>
-                
+                <!-- Separate web tool repos -->
 
                 <!-- Web development/other GH subpages -->
                 <h1>Web Tools</h1>
                 <ul><a href="tools/icb_lookup/index.html"><b>Postcode CCG/ICB Lookup Tool</b></a></ul>
+                <!-- IDEA - webscraper for Autotrader generating a .csv -->
+                <!-- Ruby on Rails project -->
+                <!-- Typescript project -->
+                <!-- Angular project -->
+                <!-- React project -->
+                <!-- PostgreSQL project -->
                 
-                <!-- Web development/other GH subpages -->
-                <h1>Spreadsheets & Databases</h1>
+                <!-- Google Sheet links -->
+                <h1>Spreadsheets</h1>
                 <p><b>TODO</b>- add examples</p>
-                <!-- <ul><a href="tools/icb_lookup/index.html"><b>Postcode CCG/ICB Lookup Tool</b></a></ul> -->
+                <!-- Budgeting & Finance Tracking Spreadsheet -->
+                <!-- Nutrition Tracking Spreadsheet -->
+                <!-- Car Weighting Spreadsheet -->
+                 <!-- TODO - Pivot Table example -->
 
                 <!-- Game development links -->
                 <h1><a href="https://dandoesathing.itch.io/">Games</a></h1>
