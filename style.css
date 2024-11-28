@@ -9,7 +9,7 @@ html, body {
 /* TODO organise and remove autogen comments from css */
 
 #main_body {
-    margin-left: 20px;
+    margin-left: 120px;
     margin: 20px auto; /* Adds spacing at the top and bottom, centers horizontally */
     background-color: #f9f9f9; /* Optional: Background color for visual clarity */
     box-sizing: border-box; /* Ensures padding is included in the width */
