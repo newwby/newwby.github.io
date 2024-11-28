@@ -31,26 +31,124 @@ function myFunction() {
         <div id="header">
             <div class="navigation_bar" id="mynavigation_bar">
                 <a href="#home" class="active">Home</a>
-                <a href="#news">News</a>
-                <a href="#contact">Contact</a>
-                <div class="dropdown">
-                  <button class="dropbtn">Dropdown
+                <!-- TODO add blog? -->
+                <!-- <a href="#blog">Blog</a> -->
+                
+                <!-- GitHub repository div -->
+                <div class="dropdown" id="dropdownGitRepos">
+                  <button class="dropbtn">Github
                     <i class="fa fa-caret-down"></i>
                   </button>
                   <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <a href="https://github.com/newwby/newwby.github.io"><b>newwby.github.io</b></a>
+                    <a href="https://github.com/newwby/Godot-Prototyping-Framework"><b>Godot Prototyping Framework</b></a>
+                    <a href="https://github.com/newwby/Godoct"><b>Godoct</b></a>
                   </div>
                 </div>
-                <a href="#about">About</a>
+                
+                <!-- Web Tools Dropdown div -->
+                <div class="dropdown" id="dropdownWebTools">
+                  <button class="dropbtn">Web Tools
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="tools/icb_lookup/index.html"><b>Postcode CCG/ICB Lookup Tool</b></a>
+                    <!-- IDEA - webscraper for Autotrader generating a .csv -->
+                    <!-- Ruby on Rails project -->
+                    <!-- Typescript project -->
+                    <!-- Angular project -->
+                    <!-- React project -->
+                    <!-- PostgreSQL project -->
+                  </div>
+                </div>
+                
+                <!-- Spreadsheets/Database Dropdown div -->
+                 <!-- TODO IMPLEMENT/ADD PUBLIC LINKS -->
+                <div class="dropdown" id="dropdownDataProjects">
+                  <button class="dropbtn">Data Projects
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <!-- <a href="tools/icb_lookup/index.html"><b>Postcode CCG/ICB Lookup Tool</b></a> -->
+                    <!-- Budgeting & Finance Tracking Spreadsheet -->
+                    <!-- Nutrition Tracking Spreadsheet -->
+                    <!-- Car Weighting Spreadsheet -->
+                    <!-- TODO - Pivot Table example -->
+                  </div>
+                </div>
+                
+                <!-- Game Development Dropdown div -->
+                <div class="dropdown" id="dropdownGamedevProjects">
+                  <button class="dropbtn">Gamedev Projects
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="https://dandoesathing.itch.io/masquercarde">Masquercarde</a>
+                    <a href="https://dandoesathing.itch.io/the-great-train-defence">The Great Train Defence</a>
+                    <a href="https://dandoesathing.itch.io/gobz-ogam">Gobz</a>
+                  </div>
+                </div>
+                
+                <!-- Artwork/Instagram Dropdown div -->
+                <!-- Reupload artwork to insta & add artwork links -->
+                <div class="dropdown" id="dropdownArtwork">
+                  <button class="dropbtn">Artwork
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <!-- Add content -->
+                  </div>
+                </div>
+                
+                <!-- Creative Writing Dropdown div -->
+                <!-- Stories & serial/flash fiction -->
+                <!-- TODO, upload more from GDrive? -->
+                <div class="dropdown" id="dropdownCreativeWriting">
+                  <button class="dropbtn">Creative Writing
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="https://tapas.io/series/The-Blackest-Virtue">The Blackest Virtue</a>
+                    <a href="https://tapas.io/series/Patient-Zero">Patient Zero</a>
+                    <a href="https://tapas.io/series/Pawns">Pawns</a>
+                  </div>
+                </div>
+                
+                <!-- TODO automate creating these divs via Javascript -->
+                <!-- List Article Writing Dropdown div -->
+                <div class="dropdown" id="dropdownListArticles">
+                  <button class="dropbtn">Articles
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content">
+                    <a href="https://dandoesathing.wordpress.com/2018/10/29/the-unlikeliest-wars-in-history/">The Unlikeliest ‘Wars’ in History</a>
+                    <a href="https://dandoesathing.wordpress.com/2019/05/09/5-unexpected-things-done-by-famous-people/">5 Unexpected things done by famous people</a>
+                    <a href="https://dandoesathing.wordpress.com/2018/11/07/your-phone-isnt-your-friend/">Your Phone isn’t your Friend</a>
+                    <a href="https://dandoesathing.wordpress.com/2018/10/23/your-subconscious-decides-your-politics/">Your Subconscious Decides Your Politics</a>
+                    <a href="https://dandoesathing.wordpress.com/2018/10/17/5-side-effects-of-self-medicating-with-alcohol/">5 Side-Effects of Self Medicating with Alcohol</a>
+                  </div>
+                </div>
+
+                <!-- TODO add contact to home page? -->
+                <!-- <a href="#contact">Contact</a> -->
+                <!-- <a href="#about">About</a> -->
                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
               </div>
+
         </div>
 
         <!-- Main body should be a scrolling section containing the currently loaded content -->
         <div id="main_body">
-
+            
+            <div id = "devName">
+                <h1>Daniel Newby</h1>
+            </div>
+            <div id = "tagline">
+                Lifelong Developer,
+                Lover of Carbs,
+                Experienced Problem Solver.
+            </div>
+            
         </div>
 
         <!-- Footer should not always be on screen and be at bottom of main body, or always on screen? Maybe two footer variations? -->
@@ -58,74 +156,6 @@ function myFunction() {
 
         </div>
 
-    </div>
-
-    <h1>Portfolio Content Page</h1>
-    <div id="indexBody">
-        <p>
-            <div id="disclaimer">This page is under development!</div>
-            <!-- Temporary line breaks until CSS added -->
-            <div id="portfolioLists">
-                <br />
-                <!-- TODO generate this from a DB don't manually code it -->
-                
-                <!-- TODO upload CV -->
-                <!-- <h1><a href="">Daniel Newby CV</a></h1> -->
-
-                <!-- TODO Add LinkedIn link -->
-
-                <!-- Open source and public projects -->
-                <h1><a href="https://github.com/newwby">My GitHub</a></h1>
-                <ul><a href="https://github.com/newwby/newwby.github.io"><b>newwby.github.io</b></a> - <i>(this GitHub page!)</i></ul>
-                <ul><a href="https://github.com/newwby/Godot-Prototyping-Framework"><b>Godot Prototyping Framework</b></a> - <i>universal modules for Godot4</i></ul>
-                <ul><a href="https://github.com/newwby/Godoct"><b>Godoct</b></a> - <i>documentation generator for Godot projects</i></ul>
-                <!-- Separate web tool repos -->
-
-                <!-- Web development/other GH subpages -->
-                <h1>Web Tools</h1>
-                <ul><a href="tools/icb_lookup/index.html"><b>Postcode CCG/ICB Lookup Tool</b></a></ul>
-                <!-- IDEA - webscraper for Autotrader generating a .csv -->
-                <!-- Ruby on Rails project -->
-                <!-- Typescript project -->
-                <!-- Angular project -->
-                <!-- React project -->
-                <!-- PostgreSQL project -->
-                
-                <!-- Google Sheet links -->
-                <h1>Spreadsheets</h1>
-                <p><b>TODO</b>- add examples</p>
-                <!-- Budgeting & Finance Tracking Spreadsheet -->
-                <!-- Nutrition Tracking Spreadsheet -->
-                <!-- Car Weighting Spreadsheet -->
-                 <!-- TODO - Pivot Table example -->
-
-                <!-- Game development links -->
-                <h1><a href="https://dandoesathing.itch.io/">Games</a></h1>
-                <ul><a href="https://dandoesathing.itch.io/masquercarde">Masquercarde</a></ul>
-                <ul><a href="https://dandoesathing.itch.io/the-great-train-defence">The Great Train Defence</a></ul>
-                <ul><a href="https://dandoesathing.itch.io/gobz-ogam">Gobz</a></ul>
-                
-                <!-- Artwork links -->
-                <h1>Artwork</h1>
-                <ul><b>TODO: Reupload artwork to insta & add artwork links</b></ul>
-                <!-- <ul><a href="">undefined link</a></ul> -->
-                
-                <!-- Stories & serial/flash fiction -->
-                <!-- TODO, upload more from GDrive? -->
-                <h1><a href="https://tapas.io/dtnorthwriting">Creative Writing</a></h1>
-                <ul><a href="https://tapas.io/series/The-Blackest-Virtue">The Blackest Virtue</a></ul>
-                <ul><a href="https://tapas.io/series/Patient-Zero">Patient Zero</a></ul>
-                <ul><a href="https://tapas.io/series/Pawns">Pawns</a></ul>
-                
-                <!-- Content writing listicles -->
-                <h1><a href="https://dandoesathing.wordpress.com/blog/">List Articles</a></h1>
-                <ul><a href="https://dandoesathing.wordpress.com/2018/10/29/the-unlikeliest-wars-in-history/">The Unlikeliest ‘Wars’ in History</a></ul>
-                <ul><a href="https://dandoesathing.wordpress.com/2019/05/09/5-unexpected-things-done-by-famous-people/">5 Unexpected things done by famous people</a></ul>
-                <ul><a href="https://dandoesathing.wordpress.com/2018/11/07/your-phone-isnt-your-friend/">Your Phone isn’t your Friend</a></ul>
-                <ul><a href="https://dandoesathing.wordpress.com/2018/10/23/your-subconscious-decides-your-politics/">Your Subconscious Decides Your Politics</a></ul>
-                <ul><a href="https://dandoesathing.wordpress.com/2018/10/17/5-side-effects-of-self-medicating-with-alcohol/">5 Side-Effects of Self Medicating with Alcohol</a></ul>
-            </div>
-        </p>
     </div>
 </body>
 </html>

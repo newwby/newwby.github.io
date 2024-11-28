@@ -61,6 +61,40 @@ button {
     cursor: pointer;
 }
 
+/* TODO organise and remove autogen comments from css */
+
+#main_body {
+    margin-top: 10px; /* Adds space above the name content */
+    margin-left: 20px;
+    margin: 20px auto; /* Adds spacing at the top and bottom, centers horizontally */
+}
+
+#tagline {
+    font-weight: bold;
+    margin: 20px 0; /* Adds spacing above and below the tagline */
+    padding: 10px; /* Adds some inner spacing inside the tagline box */
+    background-color: rgba(200, 200, 200, 0.3); /* Adds a faint background color */
+    display: block; /* Makes the div take up the full width of its container */
+    width: 100%; /* Ensures the tagline spans the entire width of the page */
+    font-size: 16px; /* Adjust font size to your preference */
+    color: #333; /* Ensures good contrast for text readability */
+    box-sizing: border-box; /* Ensures padding doesn't cause the div to overflow */
+}
+
+#devName {
+    font-size: 24px; /* Adjust for appropriate size */
+    text-shadow:#333;
+    font-weight: 900;
+}
+
+#dropdownArtwork {
+    display: none;
+}
+
+#dropdownDataProjects {
+    display: none;
+}
+
 #resultsDiv {
     margin-top: 20px;
 }
@@ -69,6 +103,7 @@ button {
 .navigation_bar {
     background-color: #333;
     overflow: hidden;
+    margin-bottom: 30px; /* Adds space below the navigation bar */
   }
   
   /* Style the links inside the navigation bar */
