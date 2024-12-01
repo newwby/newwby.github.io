@@ -34,11 +34,7 @@ html, body {
     font-weight: 900;
 }
 
-#dropdownArtwork {
-    display: none;
-}
-
-#dropdownDataProjects {
+.dropdown_hidden {
     display: none;
 }
 
