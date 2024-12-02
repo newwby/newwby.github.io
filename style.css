@@ -7,15 +7,15 @@ html, body {
 }
 
 body {
-    background-image: url('assets/billy-huynh-W8KTS-mhFUE-unsplash.jpg');
-    background-color: #cccccc;
+    background-image: url('assets\bernd_dittrich_photo.jpg');
+    background-color: #232a49;
    }
 
 #main_body {
     margin: 1px auto;
     background-color: #f9f9f9;
     box-sizing: border-box;
-    width: calc(100% - 80px);
+    width: calc(100% - 15%);
 }
 
 #devName {
