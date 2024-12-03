@@ -7,8 +7,10 @@ html, body {
 }
 
 body {
-    background-image: url('assets\bernd_dittrich_photo.jpg');
+    background-image: url('assets/pexels-luis-gomes-166706-546819.jpg');
     background-color: #232a49;
+    background-size: calc(100%);
+    background-position: center;
    }
 
 #main_body {
@@ -139,6 +141,11 @@ body {
   
   /* The "responsive" class is added to the navigation_bar with JavaScript when the user clicks on the icon. This class makes the navigation_bar look good on small screens (display the links vertically instead of horizontally) */
   @media screen and (max-width: 600px) {
+
+    body {
+        background-size: calc(400%);
+    }
+
     .navigation_bar.responsive {position: relative;}
     .navigation_bar.responsive a.icon {
       position: absolute;
