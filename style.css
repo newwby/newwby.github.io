@@ -14,10 +14,17 @@ body {
    }
 
 #main_body {
+    /* opacity: 0.2; */
     margin: 1px auto;
-    background-color: #f9f9f9;
+    background-color: hsla(0, 0%, 100%, 0.85);
     box-sizing: border-box;
     width: calc(100% - 15%);
+}
+
+#main_body_header {
+    opacity: 1.0;
+    border: solid;
+
 }
 
 #devName {
@@ -28,7 +35,7 @@ body {
 
 #tagline {
     padding: 12px; /* Adds some inner spacing inside the tagline box */
-    background-color: rgba(200, 200, 200, 0.75); /* Adds a faint background color */
+    background-color: hsla(45, 45%, 75%, 0.75);
     display: block; /* Makes the div take up the full width of its container */
     width: 100%; /* Ensures the tagline spans the entire width of the page */
     font-size: 20px; /* Adjust font size to your preference */
