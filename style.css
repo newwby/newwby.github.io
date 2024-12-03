@@ -16,15 +16,31 @@ body {
 #main_body {
     /* opacity: 0.2; */
     margin: 1px auto;
-    background-color: hsla(0, 0%, 100%, 0.85);
+    /* background-color: hsla(0, 0%, 100%, 0.85); */
     box-sizing: border-box;
     width: calc(100% - 15%);
+    padding: 20px 0;
 }
 
 #main_body_header {
+    margin-bottom: 20px;
     opacity: 1.0;
     border: solid;
+    background-color: hsla(0, 0%, 100%, 0.85);
+}
 
+.main_body_cv_page {
+    min-height: 400px;
+    padding: 20px 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: hsla(0, 0%, 100%, 0.85);
+}
+
+#main_body_call_to_action {
+    min-height: 200px;
+    background-color: hsla(0, 0%, 100%, 0.35);
+    margin-top: 20px;
 }
 
 #devName {
