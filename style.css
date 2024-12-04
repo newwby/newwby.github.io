@@ -18,8 +18,8 @@ body {
     margin: 1px auto;
     /* background-color: hsla(0, 0%, 100%, 0.85); */
     box-sizing: border-box;
-    width: calc(100% - 15%);
-    padding: 20px 0;
+    width: calc(100% - 10%);
+    /* margin-right: 200px; */
 }
 
 #main_body_header {
@@ -29,24 +29,42 @@ body {
     background-color: hsla(0, 0%, 100%, 0.85);
 }
 
-.main_body_cv_page {
-    min-height: 400px;
-    padding: 20px 10px;
+/* NEED TO MAKE THE BG DIVS NOT HAVE PADDING, ONLY TEXT CLASS DIVS */
+.main_body_section {
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    padding-right: 40px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+.main_body_cv_page {
+    min-height: 400px;
     background-color: hsla(0, 0%, 100%, 0.85);
 }
 
 #main_body_call_to_action {
     min-height: 200px;
     background-color: hsla(0, 0%, 100%, 0.35);
+}
+
+.footer_section {
+    min-height: 200px;
+    background-color: hsla(0, 0%, 100%, 0.95);
     margin-top: 20px;
 }
 
 #devName {
-    padding: 12px; /* Adds some inner spacing inside the tagline box */
     font-size: 24px; /* Adjust for appropriate size */
     text-shadow:#3333338e 2px 2px;
+}
+
+#tagline_bg {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 #tagline {
