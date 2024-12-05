@@ -14,16 +14,12 @@ body {
    }
 
 #main_body {
-    /* opacity: 0.2; */
     margin: 1px auto;
-    /* background-color: hsla(0, 0%, 100%, 0.85); */
     box-sizing: border-box;
     width: calc(100% - 10%);
-    /* margin-right: 200px; */
 }
 
 #main_body_header {
-    margin-bottom: 20px;
     opacity: 1.0;
     border: solid;
     background-color: hsla(0, 0%, 100%, 0.85);
@@ -31,17 +27,17 @@ body {
 
 /* NEED TO MAKE THE BG DIVS NOT HAVE PADDING, ONLY TEXT CLASS DIVS */
 .main_body_section {
-    padding-top: 20px;
-    padding-left: 40px;
-    padding-bottom: 20px;
-    padding-right: 40px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .main_body_cv_page {
     min-height: 400px;
-    background-color: hsla(0, 0%, 100%, 0.85);
+    background-color: hsla(0, 0%, 100%, 0.8);
 }
 
 #main_body_call_to_action {
@@ -56,25 +52,22 @@ body {
 }
 
 #devName {
-    font-size: 24px; /* Adjust for appropriate size */
-    text-shadow:#3333338e 2px 2px;
+    font-size: 32px; /* Adjust for appropriate size */
+    text-shadow:#3333338e 4px 4px;
 }
 
-#tagline_bg {
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
+.header_bg {
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
 }
+
 
 #tagline {
-    padding: 12px; /* Adds some inner spacing inside the tagline box */
-    background-color: hsla(45, 45%, 75%, 0.75);
-    display: block; /* Makes the div take up the full width of its container */
-    width: 100%; /* Ensures the tagline spans the entire width of the page */
+    padding: 12px;
+    background-color: hsla(55, 55%, 55%, 0.75);
     font-size: 20px; /* Adjust font size to your preference */
     color: #131010; /* Ensures good contrast for text readability */
-    box-sizing: border-box; /* Ensures padding doesn't cause the div to overflow */
 }
 
 
