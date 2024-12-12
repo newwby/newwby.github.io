@@ -6,54 +6,92 @@ html, body {
     font-size:xx-large;
 }
 
-/* TODO organise and remove autogen comments from css */
+body {
+    background-image: url('assets/pexels-luis-gomes-166706-546819.jpg');
+    background-color: #232a49;
+    background-size: calc(100%);
+    background-position: center;
+   }
+
+#construction_banner {
+  /* text-align: center; */
+  /* display: none;
+  visibility: hidden; */
+  background-color: rgb(214, 214, 162);
+  min-height: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 900;
+  font-weight: bold;
+  font-size: 36px;
+}
 
 #main_body {
-    margin-left: 120px;
-    margin: 20px auto; /* Adds spacing at the top and bottom, centers horizontally */
-    background-color: #f9f9f9; /* Optional: Background color for visual clarity */
-    box-sizing: border-box; /* Ensures padding is included in the width */
-    width: calc(100% - 20px); /* Adjusts the width to account for the left margin */
+    margin: 1px auto;
+    box-sizing: border-box;
+    width: calc(100% - 10%);
 }
 
-#tagline {
-    font-weight: bold;
-    margin: 20px 0; /* Adds spacing above and below the tagline */
-    padding: 10px; /* Adds some inner spacing inside the tagline box */
-    background-color: rgba(200, 200, 200, 0.3); /* Adds a faint background color */
-    display: block; /* Makes the div take up the full width of its container */
-    width: 100%; /* Ensures the tagline spans the entire width of the page */
-    font-size: 16px; /* Adjust font size to your preference */
-    color: #333; /* Ensures good contrast for text readability */
-    box-sizing: border-box; /* Ensures padding doesn't cause the div to overflow */
+#main_body_header {
+    opacity: 1.0;
+    border: solid;
+    background-color: hsla(0, 0%, 100%, 0.85);
 }
 
-#devName {
-    font-size: 24px; /* Adjust for appropriate size */
-    text-shadow:#333;
-    font-weight: 900;
+.main_body_section {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    padding-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-#dropdownArtwork {
-    display: none;
+.main_body_cv_page {
+    min-height: 400px;
+    background-color: hsla(0, 0%, 100%, 0.8);
 }
 
-#dropdownDataProjects {
-    display: none;
+#main_body_call_to_action {
+    min-height: 200px;
+    background-color: hsla(0, 0%, 100%, 0.35);
 }
 
-#resultsDiv {
+.footer_section {
+    min-height: 200px;
+    background-color: hsla(0, 0%, 100%, 0.95);
     margin-top: 20px;
 }
 
-/* Add a black background color to the top navigation */
+#devName {
+    font-size: 32px; /* Adjust for appropriate size */
+    text-shadow:#3333338e 4px 4px;
+}
+
+.header_bg {
+    box-sizing: border-box;
+    text-align: center;
+    display: block;
+}
+
+
+#tagline {
+    padding: 12px;
+    background-color: hsla(55, 55%, 55%, 0.75);
+    font-size: 20px; /* Adjust font size to your preference */
+    color: #131010; /* Ensures good contrast for text readability */
+}
+
+
+/* default nav bar styling */
 .navigation_bar {
     background-color: #333;
     overflow: hidden;
     margin-bottom: 30px; /* Adds space below the navigation bar */
   }
   
-  /* Style the links inside the navigation bar */
+  /* link styling inside navbar */
   .navigation_bar a {
     float: left;
     display: block;
@@ -61,10 +99,16 @@ html, body {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
+    font-size: 28px;
   }
   
-  /* Add an active class to highlight the current page */
+   /* when hovered over apply these colours to the nav bar button */
+  .navigation_bar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+    color: white;
+  }
+  
+  /* Highlight for the active navigation bar element (class removed when clicked) */
   .active {
     background-color: #04AA6D;
     color: white;
@@ -83,11 +127,11 @@ html, body {
   
   /* Style the dropdown button to fit inside the navigation_bar */
   .dropdown .dropbtn {
-    font-size: 17px;
+    font-size: 28px;
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 14px 26px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -97,9 +141,9 @@ html, body {
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 12px 18px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
   
@@ -113,12 +157,6 @@ html, body {
     text-align: left;
   }
   
-  /* Add a dark background on navigation_bar links and the dropdown button on hover */
-  .navigation_bar a:hover, .dropdown:hover .dropbtn {
-    background-color: #555;
-    color: white;
-  }
-  
   /* Add a grey background to dropdown links on hover */
   .dropdown-content a:hover {
     background-color: #ddd;
@@ -130,6 +168,13 @@ html, body {
     display: block;
   }
   
+/* optional class to hide unused dropdown menus in navBar */
+  .dropdown_hidden {
+    display: none;
+}
+
+/* handling below for alternate displays */
+
   /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navigation_bar (.icon) */
   @media screen and (max-width: 600px) {
     .navigation_bar a:not(:first-child), .dropdown .dropbtn {
@@ -143,6 +188,11 @@ html, body {
   
   /* The "responsive" class is added to the navigation_bar with JavaScript when the user clicks on the icon. This class makes the navigation_bar look good on small screens (display the links vertically instead of horizontally) */
   @media screen and (max-width: 600px) {
+
+    body {
+        background-size: calc(400%);
+    }
+
     .navigation_bar.responsive {position: relative;}
     .navigation_bar.responsive a.icon {
       position: absolute;
