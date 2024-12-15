@@ -23,11 +23,21 @@ function myFunction() {
 </script>
 
 <script>
-  // Dynamically load the header
-  document.getElementById('header_placeholder').innerHTML = fetch('header.html')
-    .then(response => response.text())
-    .then(data => document.getElementById('header_placeholder').innerHTML = data)
-    .catch(error => console.error('Error loading header:', error));
+  // index 0 should be target div, index 1 should be path to html file
+  let div_data = [
+    ['header_placeholder', 'header.html']
+  ]
+
+  for (let data_pair of div_data) {
+    // Dynamically load the header - can use this same logic to load page elements on demand
+    document.getElementById(data_pair[0]).innerHTML = fetch(data_pair[1])
+      .then(response => response.text())
+      .then(data => document.getElementById(data_pair[0]).innerHTML = data)
+      .catch(error => console.error('Error loading:', data_pair));
+  }
+  // main_body_cv_page_1
+
+  
 </script>
 
 <body>  
