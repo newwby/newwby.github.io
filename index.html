@@ -7,9 +7,6 @@
     <title>Dan's Github Page</title>
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
-    <script>
-    window.onload = loadNavBar;
-    </script>
 </head>
 
 <body>  
@@ -63,5 +60,10 @@
         </div>
 
     </div>
+    
+    <!-- load initial elements after DOM finishes loading -->
+    <script>
+    window.onload = loadDiv('header_container', 'header.html');
+    </script>
 </body>
 </html>
