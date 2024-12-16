@@ -9,9 +9,9 @@ function navAddResponsive() {
   }
 }
 
-<!-- Loading logic for header (just header atm) -->
-<!-- TODO move CV page into separate HTML and load that -->
- <!-- Landing page should not be CV - it should be a targeted page explaining who I am -->
+// <!-- Loading logic for header (just header atm) -->
+// <!-- TODO move CV page into separate HTML and load that -->
+//  <!-- Landing page should not be CV - it should be a targeted page explaining who I am -->
 function loadNavBar() {
   // index 0 should be target div, index 1 should be path to html file
   // TODO fix this doesn't work rn
