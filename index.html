@@ -22,31 +22,6 @@
 
         <!-- Main body should be a scrolling section containing the currently loaded content -->
         <div id="main_body">
-            
-            <div id="main_body_header">
-                <div class="header_bg" id="devName_bg">
-                    <div id="devName">
-                        <h1>Daniel Newby</h1>
-                    </div>
-                </div>
-                <div class="header_bg" id = "tagline_bg">
-                    <div id = "tagline">
-                        <b>Developer.<br>Designer.<br>Problem-Solver.</b>
-                    </div>
-                </div>
-            </div>
-
-            <div class="main_body_section main_body_cv_page" id="main_body_cv_page_1">
-
-            </div>
-
-            <div class="main_body_section" id="main_body_call_to_action">
-
-            </div>
-
-            <div class="main_body_section main_body_cv_page" id="main_body_cv_page_2">
-
-            </div>
 
         </div>
 
@@ -60,9 +35,10 @@
         </div>
 
     </div>
-    
+
     <!-- load initial elements after DOM finishes loading -->
     <script>
+    window.onload = loadDiv('header_container', 'header.html');
     window.onload = loadDiv('header_container', 'header.html');
     </script>
 </body>

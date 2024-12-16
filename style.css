@@ -33,54 +33,11 @@ body {
     width: calc(100% - 10%);
 }
 
-#main_body_header {
-    opacity: 1.0;
-    border: solid;
-    background-color: hsla(0, 0%, 100%, 0.85);
-}
-
-.main_body_section {
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-bottom: 10px;
-    padding-right: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.main_body_cv_page {
-    min-height: 400px;
-    background-color: hsla(0, 0%, 100%, 0.8);
-}
-
-#main_body_call_to_action {
-    min-height: 200px;
-    background-color: hsla(0, 0%, 100%, 0.35);
-}
 
 .footer_section {
-    min-height: 200px;
-    background-color: hsla(0, 0%, 100%, 0.95);
-    margin-top: 20px;
-}
-
-#devName {
-    font-size: 32px; /* Adjust for appropriate size */
-    text-shadow:#3333338e 4px 4px;
-}
-
-.header_bg {
-    box-sizing: border-box;
-    text-align: center;
-    display: block;
-}
-
-
-#tagline {
-    padding: 12px;
-    background-color: hsla(55, 55%, 55%, 0.75);
-    font-size: 20px; /* Adjust font size to your preference */
-    color: #131010; /* Ensures good contrast for text readability */
+  min-height: 200px;
+  background-color: hsla(0, 0%, 100%, 0.95);
+  margin-top: 20px;
 }
 
 
