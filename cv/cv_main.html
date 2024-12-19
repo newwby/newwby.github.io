@@ -25,12 +25,21 @@
     <!-- This is the nav bar that loads the subpage divs to the cv container -->
      <!-- Three separated buttons; Qualities, Experience (default), & Education -->
     <div id="cv nav bar">
-        <p>Navigation</p>
+        <!-- <p>Navigation Buttons go in this div</p> -->
+        <button type="button" onclick="loadDiv('cv_body_container', 'cv_subpage_education.html')">Education</button>
+        <button type="button" onclick="loadDiv('cv_body_container', 'cv_subpage_experience.html')">Experience</button>
+        <button type="button" onclick="loadDiv('cv_body_container', 'cv_subpage_qualities.html')">Qualities</button>
     </div>
 
     <!-- Container that is modified when a nav bar button is clicked -->
-    <div id="cv body container">
-
+    <div id="cv_body_container">
+        <p>placeholder body content</p>
     </div>
+
+    <!-- load initial elements after DOM finishes loading -->
+    <script src="../index.js"></script>
+    <script>
+        window.onload = loadDiv('cv_body_container', 'cv_subpage_experience.html');
+    </script>
 
 </body>
