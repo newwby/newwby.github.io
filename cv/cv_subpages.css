@@ -1,0 +1,118 @@
+/* PLACEHOLDER CSS FROM CHATGPT PLEASE REVIEW AND REPLACE */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Main container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Styling for headings */
+h1, h2 {
+    color: #333;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+/* Title (Main heading) */
+h1 {
+    font-size: 2.5em;
+    color: #1a73e8; /* Accent color */
+    margin-bottom: 20px;
+}
+
+/* Subheadings */
+h2 {
+    font-size: 1.5em;
+    margin-left: 1.5em;
+    padding-left: 1em;
+    border-left: 4px solid #1a73e8; /* Left border as visual cue */
+    color: #444;
+    margin-bottom: 15px;
+}
+
+/* Styling for individual sections */
+section {
+    margin-bottom: 30px;
+}
+
+/* Add a background color for each section */
+section:nth-child(odd) {
+    background-color: #e9f1fe;
+}
+
+section:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+/* Styling paragraphs (optional, not needed in your HTML, but for future use) */
+p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* For lists in case you add any */
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Add some spacing between sections */
+h1 + h2 {
+    margin-top: 0.5em;
+}
+
+/* Links styling (in case you add any links in the future) */
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Add some padding and background on each section */
+section {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Make text more readable on mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.3em;
+    }
+}
