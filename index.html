@@ -24,7 +24,9 @@
         <div id="main_body">
             
           <div id="body_content_container">
+             <div id="body_content">
             <!-- <p>Placeholder text</p> -->
+             </div>
           </div>
         
         </div>
@@ -43,7 +45,8 @@
     <!-- load initial elements after DOM finishes loading -->
     <script>
     window.onload = loadDiv('header_container', 'header.html');
-    // window.onload = loadDiv('body_content_container', 'cv/cv.html');
+    window.onload = loadDiv('body_content', 'cv/cv_main.html');
+    // window.onload = loadDiv('cv_body_subcontainer', 'cv/cv_subpage_experience.html');
     </script>
 </body>
 </html>
