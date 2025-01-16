@@ -11,6 +11,8 @@ body {
     background-color: #232a49;
     background-size: calc(100%);
     background-position: center;
+    display: flex;
+    flex-direction: column;
    }
 
 #construction_banner {
