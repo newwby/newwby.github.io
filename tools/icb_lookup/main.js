@@ -1,15 +1,4 @@
 
-// PLACEHOLDER FOR PLANNED NODE.JS CONVERSION
-// const puppetmaster = require('puppeteer')
-
-// //demo func for puppeteer
-// async function searchSKLookup(url, search_div, search_text, result_div) {
-//     const browser = await puppetmaster.launch();
-//     const page = await browser.newPage();
-
-//     console.log('puppeteer demo func starting')
-// }
-
 // make sure the postcode entry field is focused on page load
 function focusOnLoad() {
     // postcode.focus()
