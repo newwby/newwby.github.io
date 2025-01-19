@@ -1,15 +1,4 @@
 
-// PLACEHOLDER FOR PLANNED NODE.JS CONVERSION
-// const puppetmaster = require('puppeteer')
-
-// //demo func for puppeteer
-// async function searchSKLookup(url, search_div, search_text, result_div) {
-//     const browser = await puppetmaster.launch();
-//     const page = await browser.newPage();
-
-//     console.log('puppeteer demo func starting')
-// }
-
 // make sure the postcode entry field is focused on page load
 function focusOnLoad() {
     // postcode.focus()
@@ -27,8 +16,6 @@ async function lookupCCGICB() {
         return;
     }
     
-    // otherwise do nothing because haven't sorted the lookup yet :')
-    // resultsDiv.textContent = `The CCG for postcode is... unknown! Dev hasn't implemented this function yet!`;
     let is_valid = false
     // await so the promise resolves before trying to populate resultsDiv text
     let fetch_string = 'https://api.postcodes.io/postcodes/'+encodeURIComponent(postcode.value)

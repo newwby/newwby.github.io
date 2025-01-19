@@ -1,0 +1,41 @@
+<!-- Duplicate of ICB Lookup tool except this connects to an external Vercel-hosted webapp to get prescribing cost centre code (if valid GP practice postcode) -->
+ <!-- Basically, GP postcode in and PCC Code out -->
+
+<!-- boilerplate -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescribing Cost Centre Lookup</title>
+    <link rel="stylesheet" href="pcc_lookup_style.css">
+</head>
+
+<!-- do stuff below -->
+<body>
+    <div id="container">
+        <div id="pageHeader"></div>
+        <div id="mainBody">
+            <!-- header text -->
+            <h1>Prescribing Cost Centre Lookup</h1>
+            <!-- inline search bar (text entry field and button attached to js script) -->
+            <div id="lookup-form">
+                <input type="text" id="postcode" placeholder="Please enter a valid GP postcode.">
+                <div id="lookup-button">
+                    <button onclick="lookupPCC()" id="searchButton">Search</button>
+                </div>
+            </div>
+            <div id="resultsDiv">
+                <!-- Output from <a href="https://pcc-lookup.vercel.app/">https://pcc-lookup.vercel.app/</a> goes here -->
+            </div>
+        </div>
+        <div id="pageFooter">
+            <div id="creditsBlock">
+                <p>Connects to <a href="https://pcc-lookup.vercel.app/">https://pcc-lookup.vercel.app/</a> to get prescribing cost centre</p>
+
+            </div>
+        </div>
+    </div>
+    <script src="pcc_main.js"></script>
+</body>
+</html>
