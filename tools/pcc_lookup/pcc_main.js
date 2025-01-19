@@ -18,7 +18,7 @@ async function lookupPCC() {
     
     let pcc_output = ""
     // await so the promise resolves before trying to populate resultsDiv text
-    let fetch_string = 'https://pcc-lookup.vercel.app/home?postcode='+encodeURIComponent(postcode.value)
+    let fetch_string = 'https://pcc-lookup.vercel.app/?postcode='+encodeURIComponent(postcode.value)
     let lookup = await fetch(fetch_string)
         .then(response => response.text())
         .then(data => pcc_output = data)
