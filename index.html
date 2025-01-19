@@ -53,9 +53,11 @@
 
     <!-- load initial elements after DOM finishes loading -->
     <script>
-    window.onload = loadDiv('header', 'header.html');
-    window.onload = loadDiv('body_content', 'cv/cv_main.html');
-    // window.onload = loadDiv('cv_body_subcontainer', 'cv/cv_subpage_experience.html');
+      document.addEventListener('DOMContentLoaded', () => {
+          loadDiv('header', 'header.html');
+          loadDiv('body_content', 'cv/cv_main.html');
+          // loadDiv('cv_body_subcontainer', 'cv/cv_subpage_experience.html');
+      });
     </script>
 </body>
 </html>
