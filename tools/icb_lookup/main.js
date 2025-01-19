@@ -16,8 +16,6 @@ async function lookupCCGICB() {
         return;
     }
     
-    // otherwise do nothing because haven't sorted the lookup yet :')
-    // resultsDiv.textContent = `The CCG for postcode is... unknown! Dev hasn't implemented this function yet!`;
     let is_valid = false
     // await so the promise resolves before trying to populate resultsDiv text
     let fetch_string = 'https://api.postcodes.io/postcodes/'+encodeURIComponent(postcode.value)
