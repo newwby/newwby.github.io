@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dan's Github Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="cv/cv_subpages.css" type="text/css">
     <script src="index.js"></script>
 </head>
 
@@ -53,9 +54,11 @@
 
     <!-- load initial elements after DOM finishes loading -->
     <script>
-    window.onload = loadDiv('header', 'header.html');
-    window.onload = loadDiv('body_content', 'cv/cv_main.html');
-    // window.onload = loadDiv('cv_body_subcontainer', 'cv/cv_subpage_experience.html');
+      document.addEventListener('DOMContentLoaded', () => {
+          loadDiv('header', 'header.html');
+          loadDiv('body_content', 'cv/cv_main.html');
+          // loadDiv('cv_body_subcontainer', 'cv/cv_subpage_experience.html');
+      });
     </script>
 </body>
 </html>
