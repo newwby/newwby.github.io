@@ -23,7 +23,11 @@ async function lookupPCC() {
         .then(response => response.text())
         .then(data => pcc_output = data)
         .catch(error => console.error('Error:', error));
-    resultsDiv.innerHTML = pcc_output
+    if (pcc_output="") {
+        resultsDiv.innerHTML = ""
+    } else {
+        resultsDiv.innerHTML = `<b>Prescribing Cost Centre Code</b>: ${pcc_output}`
+    }
     
 }
 
