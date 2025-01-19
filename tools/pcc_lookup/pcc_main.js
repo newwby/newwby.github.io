@@ -18,15 +18,18 @@ async function lookupPCC() {
     
     let pcc_output = ""
     // await so the promise resolves before trying to populate resultsDiv text
-    let fetch_string = 'https://pcc-lookup.vercel.app/?postcode='+encodeURIComponent(postcode.value)
+    const webapp_target = 'https://pcc-lookup.vercel.app/?postcode='
+    // const local_target = 'http://localhost:4000/?postcode='
+    let fetch_string = webapp_target+encodeURIComponent(postcode.value)
     let lookup = await fetch(fetch_string)
         .then(response => response.text())
         .then(data => pcc_output = data)
         .catch(error => console.error('Error:', error));
-    if (pcc_output="") {
+    if (pcc_output=="") {
         resultsDiv.innerHTML = ""
     } else {
         resultsDiv.innerHTML = `<b>Prescribing Cost Centre Code</b>: ${pcc_output}`
+        // console.log("pcc output is "+pcc_output)
     }
     
 }
