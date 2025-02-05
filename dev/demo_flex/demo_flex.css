@@ -1,0 +1,49 @@
+.flex_table {
+    display: flex;
+    flex-direction: column;
+    /* flex-flow: column wrap; */
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    /* margin-left: 5%; */
+    /* margin-right: 5%; */
+    /* flex-flow: column wrap; */
+}
+
+.flex_row div {
+    margin: 0.25%;
+    height: 100px;
+    width: 400px;
+}
+
+#top_row div {
+    background: peachpuff;
+    border: 14px solid saddlebrown;
+    flex: initial;
+}
+
+#mid_row div {
+    background: rgb(132, 84, 160);
+    border: 14px solid black;
+    flex: auto;
+}
+
+#bottom_row div {
+    background: yellow;
+    border: 14px solid red;
+    flex: none;
+}
+
+/*
+.flex_container .flex_item_side {
+    width: 100px;
+    flex: 1 2 150px;
+}
+
+.flex_container .flex_item_main {
+  flex: 2 1 0%;
+  flex-shrink: 0;
+}
+*/

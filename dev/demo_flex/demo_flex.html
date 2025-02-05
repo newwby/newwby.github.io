@@ -1,0 +1,48 @@
+<!-- boilerplate -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demonstration of basic CSS Flex behaviours with 1x3 div rows</title>
+    <link rel="stylesheet" href="demo_flex.css" type="text/css">
+    <!-- TODO add experiments for adding page elements on button load (changing css properties?) -->
+    <!-- <script src="js-file.js" defer></script> -->
+</head>
+
+<header>
+
+</header>
+
+<body>
+    <div class="flex_table">
+        <p><b>Top Row</b> (flex: initial;)</p>
+        <div class="flex_row" id="top_row">
+            <div class="flex_item"></div>
+            <div class="flex_item"></div>
+            <div class="flex_item"></div>
+        </div>
+        <p><b>Mid Row</b> (flex: auto;)</p>
+        <div class="flex_row" id="mid_row">
+            <div class="flex_item"></div>
+            <div class="flex_item"></div>
+            <div class="flex_item"></div>
+        </div>
+        <p><b>Bottom Row</b> (flex: none;)</p>
+        <div class="flex_row" id="bottom_row">
+            <div class="flex_item"></div>
+            <div class="flex_item"></div>
+            <div class="flex_item"></div>
+        </div>
+    </div>
+
+    <div class="flex_container">
+        <div class="flex_item_side" id="body_top_fi_left"></div>
+        <div class="flex_item_main" id="body_top_fi_center"></div>
+        <div class="flex_item" id="body_top_fi_right"></div>
+    </div>
+</body>
+
+<footer>
+
+</footer>
