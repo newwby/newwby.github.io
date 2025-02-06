@@ -1,0 +1,69 @@
+.flex_table {
+    display: flex;
+    flex-direction: column;
+    /* flex-flow: column wrap; */
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+    /* margin-left: 5%; */
+    /* margin-right: 5%; */
+    /* flex-flow: column wrap; */
+}
+
+.flex_row div {
+    margin: 0.25%;
+    height: 100px;
+    width: 400px;
+}
+
+#top_row div {
+    background: peachpuff;
+    border: 14px solid saddlebrown;
+    flex: initial;
+}
+
+#mid_row div {
+    background: rgb(132, 84, 160);
+    border: 14px solid black;
+    flex: auto;
+}
+
+#bottom_row div {
+    background: yellow;
+    border: 14px solid red;
+    flex: none;
+}
+
+.changeDirectionButton {
+    width: 400px;
+    height: 200px;
+    min-width: 250px;
+    min-height: 50px;
+}
+
+.button {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+/*
+.flex_container .flex_item_side {
+    width: 100px;
+    flex: 1 2 150px;
+}
+
+.flex_container .flex_item_main {
+  flex: 2 1 0%;
+  flex-shrink: 0;
+}
+*/
