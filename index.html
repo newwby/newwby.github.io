@@ -15,51 +15,37 @@
   <header>
     <!-- Navigation bar loads into this div -->
     <div id="navbar_container"></div>
-  </header>
-
-  <div id="root">
-      <div id="construction_banner">
-        <div class="construction_text">
-          <p><b>UNDER CONSTRUCTION!</b></p>
-        </div>
-        <div class="construction_text">
-          <!-- <p> Please bear with me as I test/break things!</p> -->
-            <!-- Actually may keep as static page -->
-          <!-- <p>Moving to https://newwby.vercel.app/ soon!</p> -->
-        </div>
-        
+    
+    <!-- Temporary construction banner to be removed when redesign is finished -->
+    <div id="construction_banner">
+      <div class="construction_text">
+        <p><b>UNDER CONSTRUCTION!</b></p>
       </div>
-
-      <!-- Main body should be a scrolling section containing the currently loaded content -->
-      <div id="main">
-          
-        <div id="body_content_container">
-            <div id="body_content">
-          <!-- <p>Placeholder text</p> -->
-            </div>
-        </div>
-      
-      </div>
-
-      <!-- Problems with footer flexbox so temporarily removed -->
-      <!-- Footer should not always be on screen and be at bottom of main body, or always on screen? Maybe two footer variations? -->
-      <div id="footer">
-
-          <div class="footer_section">
-
-          </div>
-
-      </div>
-
     </div>
 
-    <!-- load initial elements after DOM finishes loading -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-          loadDiv('navbar_container', 'header.html');
-          loadDiv('body_content', 'cv/cv_main.html');
-          // loadDiv('cv_body_subcontainer', 'cv/cv_subpage_experience.html');
-      });
-    </script>
+  </header>
+
+  <!-- Main body -->
+  <div id="root">
+
+      <!-- Current existing index setup -->
+      <div id="main">
+        <div id="body_content_container">
+          <!-- main page loads into this div -->
+          <div id="body_content"></div> 
+        </div>
+      </div>
+
+  <!-- Root close -->
+  </div>
+
+  <!-- load initial elements after DOM finishes building -->
+  <!-- currently the subpage does not load -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        loadDiv('navbar_container', 'header.html');
+        loadDiv('body_content', 'cv/cv_main.html');
+    });
+  </script>
 </body>
 </html>
