@@ -27,14 +27,18 @@
 
   <!-- Main body -->
   <div id="root">
+    
+    <div id="flex_container">
+      <!-- Main page header goes in here -->
+      <div class="content_block" id="body_header"></div>
+      
+      <!-- Following divs repeat per defined portfolio section; loaded on DOM build -->
+      <!-- Flex divider is a thin separator between content blocks -->
+      <div class="content_divider"></div>
+      <!-- Content block consists of a background image with header/text summarising the section --> <!-- //TODO// make scrollable -->
+      <div class="content_block"></div>
 
-      <!-- Current existing index setup -->
-      <div id="main">
-        <div id="body_content_container">
-          <!-- main page loads into this div -->
-          <div id="body_content"></div> 
-        </div>
-      </div>
+    </div>
 
   <!-- Root close -->
   </div>
