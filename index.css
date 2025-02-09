@@ -19,22 +19,48 @@ body {
     flex-direction: column;
 }
 
-/* applies to all flex items inside the container, blocks & dividers */
+/* applies to all flex items inside the container, header, blocks & dividers */
 #flex_container div {
     /* width: 100%; */
     flex: auto;
-    margin: 2px;
+    margin: 8px;
     padding: 20px;
-    background: rgb(231, 227, 233, 0.9);
     border: 4px solid black;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
 }
 
-/* applies to block */
-.content_block {
-    height: 300px;
+/* The top block welcoming to the page */
+#body_header_block {
+    background: rgb(231, 227, 233, 0.9);
 }
 
+/* applies to block */
+.content_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500px;
+    background: url('./assets/default_content_placeholder_background.webp'); /* Fallback if block background image can't load */
+    background-size: contain;
+}
+
+/* Content block title/header text */
+.content_block h1 {
+    margin: 0px; /* Remove default h1 margin */
+    font-size: 5vw;
+    text-align: left;
+    word-wrap: normal;
+}
+
+/* Content block descriptive text  */
+.content_block p {
+    font-size: 2vw;
+    text-align: right;
+    word-wrap: normal;
+    align-self: flex-end;
+}
+
+/* Dividers removed presently - remove this CSS if not reintroduced*/
 .content_divider {
     height: 20px;
     visibility: hidden;
