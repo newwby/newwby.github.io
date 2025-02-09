@@ -23,8 +23,8 @@ body {
 #flex_container div {
     /* width: 100%; */
     flex: auto;
-    margin: 8px;
-    padding: 20px;
+    margin: 1% 0;
+    padding: 30px;
     border: 4px solid black;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
 }
@@ -47,7 +47,7 @@ body {
 /* Content block title/header text */
 .content_block h1 {
     margin: 0px; /* Remove default h1 margin */
-    font-size: 5vw;
+    font-size: 4vw;
     text-align: left;
     word-wrap: normal;
 }
