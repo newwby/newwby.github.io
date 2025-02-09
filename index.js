@@ -49,8 +49,8 @@ function addContentBlock(arg_background_url, arg_title, arg_text) {
       )
     }
   })
-  new_div.style.background = arg_background_url
-
+  new_div.style.backgroundImage = `url('${arg_background_url}')`
+  
   // Add content block text
   const new_header = document.createElement("h1")
   new_header.innerText = arg_title

@@ -41,7 +41,7 @@ body {
     justify-content: space-between;
     height: 500px;
     background: url('./assets/default_content_placeholder_background.webp'); /* Fallback if block background image can't load */
-    background-size: contain;
+    background-size: cover;
 }
 
 /* Content block title/header text */
