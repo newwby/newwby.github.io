@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dan's Github Page</title>
+    <title>Daniel Newby's Portfolio</title>
     <link rel="stylesheet" href="index.css" type="text/css">
     <script src="index.js"></script>
 </head>
@@ -30,15 +30,7 @@
     <div id="flex_container">
       <!-- Main page header goes in here -->
       <div id="body_header_block"></div>
-      
-      <!-- Following divs repeat per defined portfolio section; loaded on DOM build -->
-      <!-- Flex divider is a thin separator between content blocks -->
-      <!-- <div class="content_divider"></div> -->
-      <div class="content_block">
-        <h1>Lorem ipsum</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      </div>
-      
+      <!-- All other content blocks are loaded by JS -->
 
     </div>
 
@@ -50,6 +42,9 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
         loadDiv('navbar_container', 'header.html');
+        addContentBlock('URL', 'Lorem ipsum', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
+        addContentBlock('assets/default_content_placeholder_background.webp', 'Content Block Title Test', 'Content Block Text Test')
+        addContentBlock('assets/pexels-luis-gomes-166706-546819.jpg', 'Placeholder content block', 'Placeholder text')
     });
   </script>
 </body>
