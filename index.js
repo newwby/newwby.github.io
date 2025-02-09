@@ -42,8 +42,14 @@ function addContentBlock(arg_background_url, arg_title, arg_text) {
   // Create content block root and set background image
   const new_div = document.createElement("div")
   new_div.classList.add("content_block")
-  let testing_url = "assets/pexels-luis-gomes-166706-546819.jpg"
-  new_div.style.background = testing_url
+  fetch(arg_background_url).then(response => {
+    if (!response.ok) {
+      console.log("Cannot locate background url passed as argument, no content block created; "+
+        `invalid url is ${arg_background_url}`
+      )
+    }
+  })
+  new_div.style.background = arg_background_url
 
   // Add content block text
   const new_header = document.createElement("h1")
