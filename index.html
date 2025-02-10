@@ -4,61 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dan's Github Page</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <link rel="stylesheet" href="cv/cv_subpages.css" type="text/css">
+    <title>Daniel Newby's Portfolio</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
     <script src="index.js"></script>
 </head>
 
 <body>  
-    <!-- TODO add dark mode, preserve user choice through cookies (cookie GDPR prompt that only appears on toggling if not shown before?) -->
+  
+  <header>
+    <!-- Navigation bar loads into this div -->
+    <div id="navbar_container"></div>
+  </header>
+
+  <!-- Main body -->
+  <div id="root">
     
-    <div id="root">
-
-      <div id="header"></div>
-
-        <div id="construction_banner">
-          <div class="construction_text">
-            <p><b>UNDER CONSTRUCTION!</b></p>
-          </div>
-          <div class="construction_text">
-            <!-- <p> Please bear with me as I test/break things!</p> -->
-             <!-- Actually may keep as static page -->
-            <!-- <p>Moving to https://newwby.vercel.app/ soon!</p> -->
-          </div>
-          
-        </div>
-
-        <!-- Main body should be a scrolling section containing the currently loaded content -->
-        <div id="main">
-            
-          <div id="body_content_container">
-             <div id="body_content">
-            <!-- <p>Placeholder text</p> -->
-             </div>
-          </div>
-        
-        </div>
-
-        <!-- Problems with footer flexbox so temporarily removed -->
-        <!-- Footer should not always be on screen and be at bottom of main body, or always on screen? Maybe two footer variations? -->
-        <div id="footer">
-
-            <div class="footer_section">
-
-            </div>
-
-        </div>
+    <div id="flex_container">
+      <!-- Main page header goes in here -->
+      <div id="body_header_block">
+        <h1>Daniel Newby</h1>
+        <h2>Welcome to my Portfolio. Scroll to learn more about my work!</h2>
+      </div>
+      <!-- All other content blocks are loaded by JS -->
 
     </div>
 
-    <!-- load initial elements after DOM finishes loading -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-          loadDiv('header', 'header.html');
-          loadDiv('body_content', 'cv/cv_main.html');
-          // loadDiv('cv_body_subcontainer', 'cv/cv_subpage_experience.html');
-      });
-    </script>
+  <!-- Root close -->
+  </div>
+
+  <!-- load initial elements after DOM finishes building -->
+  <!-- currently the subpage does not load -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        loadDiv('navbar_container', 'header.html');
+        addContentBlock('assets/block_background_1_coding.png', 'Software Developer', 'Experienced with multiple development languages')
+        addContentBlock('assets/block_background_2_data.png', 'Data Analyst', 'Spreadsheet and database capabilities')
+        addContentBlock('assets/block_background_3_gamedev.png', 'Game Developer', 'Multiple completed game projects')
+        addContentBlock('assets/block_background_4_figma.png', 'Designer', 'Artistic and design skills')
+        addContentBlock('assets/block_background_5_writing.png', 'Writer', 'Published content writer')
+    });
+  </script>
 </body>
 </html>
