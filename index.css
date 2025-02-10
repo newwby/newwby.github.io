@@ -44,6 +44,7 @@ body {
 #body_header_block h1 {
     margin: 0px;
     font-size: 6vw;
+    text-shadow: rgba(0, 0, 0, 0.2) 6px 6px;
     text-align: left;
     /* make the first name/surname wrap around */
     /* text-wrap: pretty; */
@@ -51,6 +52,7 @@ body {
     /* position:absolute; */
     /* add background behind text */
     background-color: white;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.75);
     display:inline;
     padding: 5px 10px;
     border-radius: 25px;
@@ -59,7 +61,13 @@ body {
 #body_header_block h2 {
     margin: 0px;
     font-size: 2vw;
+    text-shadow: rgba(0, 0, 0, 0.2) 6px 6px;
     text-align: right;
+    /* background-color: rgba(255, 255, 255, 0.5); */
+    /* box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.55); */
+    display:inline;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 /* applies to block */
@@ -84,7 +92,8 @@ body {
     background-color: rgba(255, 255, 255, 0.90);
     display: inline-block;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.75);
 }
 
 /* Content block descriptive text  */
@@ -99,6 +108,7 @@ body {
     display: inline-block;
     padding: 5px 10px;
     border-radius: 5px;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.55);
 }
 
 /* Dividers removed presently - remove this CSS if not reintroduced*/
