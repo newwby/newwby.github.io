@@ -38,15 +38,22 @@ body {
     margin: 1% 4%;
     background: url('assets/block_background_0_header.png');
     background-size: cover;
+    border-radius: 15px;
 }
 
 #body_header_block h1 {
     margin: 0px;
     font-size: 6vw;
     text-align: left;
-    text-wrap: pretty;
-    width: 200px;
-    position:absolute;
+    /* make the first name/surname wrap around */
+    /* text-wrap: pretty; */
+    /* width: 200px; */
+    /* position:absolute; */
+    /* add background behind text */
+    background-color: white;
+    display:inline;
+    padding: 5px 10px;
+    border-radius: 25px;
 }
 
 #body_header_block h2 {
@@ -64,6 +71,7 @@ body {
     height: 500px;
     background: url('./assets/default_content_placeholder_background.webp'); /* Fallback if block background image can't load */
     background-size: cover;
+    border-radius: 15px;
 }
 
 /* Content block title/header text */
@@ -72,6 +80,11 @@ body {
     font-size: 4vw;
     text-align: left;
     word-wrap: normal;
+    /* add background behind text */
+    background-color: rgba(255, 255, 255, 0.90);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 /* Content block descriptive text  */
@@ -81,6 +94,11 @@ body {
     text-align: right;
     word-wrap: normal;
     align-self: flex-end;
+    /* add background behind text */
+    background-color: rgba(255, 255, 255, 0.85);
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 /* Dividers removed presently - remove this CSS if not reintroduced*/
