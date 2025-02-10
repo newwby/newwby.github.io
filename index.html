@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Newby's Portfolio</title>
     <link rel="stylesheet" href="index.css" type="text/css">
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 </head>
 
 <body>  
@@ -33,15 +33,14 @@
   </div>
 
   <!-- load initial elements after DOM finishes building -->
-  <!-- currently the subpage does not load -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
         loadDiv('navbar_container', 'header.html');
-        addContentBlock('assets/block_background_1_coding.png', 'Software Developer', 'Experienced with multiple development languages')
-        addContentBlock('assets/block_background_2_data.png', 'Data Analyst', 'Spreadsheet and database capabilities')
-        addContentBlock('assets/block_background_3_gamedev.png', 'Game Developer', 'Multiple completed game projects')
-        addContentBlock('assets/block_background_4_figma.png', 'Designer', 'Artistic and design skills')
-        addContentBlock('assets/block_background_5_writing.png', 'Writer', 'Published content writer')
+        addContentBlock('assets/block_background_1_coding.png', 'Software Developer', 'Experienced with multiple development languages');
+        addContentBlock('assets/block_background_2_data.png', 'Data Analyst', 'Spreadsheet and database capabilities');
+        addContentBlock('assets/block_background_3_gamedev.png', 'Game Developer', 'Multiple completed game projects');
+        addContentBlock('assets/block_background_4_figma.png', 'Designer', 'Artistic and design skills');
+        addContentBlock('assets/block_background_5_writing.png', 'Writer', 'Published content writer');
     });
   </script>
 </body>
