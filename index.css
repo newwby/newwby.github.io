@@ -36,6 +36,8 @@ body {
     background: rgb(231, 227, 233, 0.9);
     height: 400px;
     margin: 1% 4%;
+    background: url('assets/block_background_0_header.png');
+    background-size: cover;
 }
 
 #body_header_block h1 {
