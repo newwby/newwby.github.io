@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Demonstration of basic CSS Flex behaviours with 1x3 div rows</title>
     <link rel="stylesheet" href="demo_flex.css" type="text/css">
-    <!-- TODO add experiments for adding page elements on button load (changing css properties?) -->
-    <!-- <script src="js-file.js" defer></script> -->
+    <script src="demo_flex.js" defer></script>
 </head>
 
 <header>
@@ -15,7 +14,8 @@
 </header>
 
 <body>
-    <div class="flex_table">
+    <button onclick="changeFlexDirection()" id="changeDirectionButton">Switch root flex direction</button>
+    <div class="flex_table" id="flex_root_container">
         <p><b>Top Row</b> (flex: initial;)</p>
         <div class="flex_row" id="top_row">
             <div class="flex_item"></div>
