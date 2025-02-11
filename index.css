@@ -24,7 +24,7 @@ body {
     /* width: 100%; */
     flex: auto;
     padding: 30px;
-    border: 4px solid black;
+    border: 4px solid rgb(0, 0, 0);
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.4);
 }
 
@@ -43,7 +43,7 @@ body {
 
 #body_header_block h1 {
     margin: 0px;
-    font-size: 6vw;
+    font-size: clamp(24px, 4vw + 48px, 120px);
     text-shadow: rgba(0, 0, 0, 0.2) 6px 6px;
     text-align: left;
     /* make the first name/surname wrap around */
@@ -60,11 +60,11 @@ body {
 
 #body_header_block h2 {
     margin: 0px;
-    font-size: 2vw;
+    font-size: clamp(16px, 2vw + 24px, 55px);
     text-shadow: rgba(0, 0, 0, 0.2) 6px 6px;
-    text-align: right;
-    /* background-color: rgba(255, 255, 255, 0.5); */
-    /* box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.55); */
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.995);
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.55);
     display:inline;
     padding: 5px 10px;
     border-radius: 5px;
@@ -72,20 +72,22 @@ body {
 
 /* applies to block */
 .content_block {
-    margin: 2% 2%;
+    margin: 2.5% 5%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 500px;
-    background: url('./assets/default_content_placeholder_background.webp'); /* Fallback if block background image can't load */
+    /* Fallback if block background image can't load */
+    background: url('./assets/default_content_placeholder_background.webp') no-repeat center;
     background-size: cover;
     border-radius: 15px;
 }
 
+/* There are style similarities between h1/p  and content block/header block variations - could combine these styles?*/
 /* Content block title/header text */
 .content_block h1 {
     margin: 0px; /* Remove default h1 margin */
-    font-size: 4vw;
+    font-size: clamp(24px, 4vw + 36px, 90px);
     text-align: left;
     word-wrap: normal;
     /* add background behind text */
@@ -99,7 +101,7 @@ body {
 /* Content block descriptive text  */
 .content_block p {
     margin: 0px;
-    font-size: 2vw;
+    font-size: clamp(16px, 2vw + 24px, 60px);
     text-align: right;
     word-wrap: normal;
     align-self: flex-end;
@@ -116,3 +118,13 @@ body {
     height: 20px;
     visibility: hidden;
 }
+
+
+/* Mobile display for content block */
+@media (max-width: 768px) {
+    .content_block {
+      background-size: cover;
+      background-position-x: 43%;
+      /* background-size: 400%; */
+      /* background-position: center; */
+    }
