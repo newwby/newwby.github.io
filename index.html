@@ -18,6 +18,10 @@
 
   <!-- Main body -->
   <div id="root">
+
+    <div class="construction_element hidden" id="mobile_banner">
+      <p>Limited width (i.e. mobile) functionality for this site has been temporarily disabled, please switch your browser to show desktop view.</p>
+    </div>
     
     <div id="flex_container">
       <!-- Main page header goes in here -->
@@ -36,11 +40,16 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
         loadDiv('navbar_container', 'header.html');
+        // if (window.innerWidth < 768) {} else {
         addContentBlock('assets/block_background_1_coding.png', 'Software Developer', 'Experienced with multiple development languages');
         addContentBlock('assets/block_background_2_data.png', 'Data Analyst', 'Spreadsheet and database capabilities');
         addContentBlock('assets/block_background_3_gamedev.png', 'Game Developer', 'Multiple completed game projects');
         addContentBlock('assets/block_background_4_figma.png', 'Designer', 'Artistic and design skills');
         addContentBlock('assets/block_background_5_writing.png', 'Writer', 'Published content writer');
+        // }
+    });
+    window.addEventListener('resize', () => {
+      toggleMobileWarning();      
     });
   </script>
 </body>
