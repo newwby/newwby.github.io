@@ -120,8 +120,13 @@ body {
 }
 
 
-/* Mobile display for content block */
+/* Mobile display changes*/
 @media (max-width: 768px) {
+    body {
+        /* background-repeat:repeat-y; */
+        background-size: 150vh;
+        background-position:top;
+    }
     .content_block {
       background-size: cover;
       background-position-x: 43%;
