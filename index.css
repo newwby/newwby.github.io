@@ -7,11 +7,16 @@ body {
     background-size: cover;
 }
 
-#construction_banner {
+.construction_element {
     background-color: rgb(214, 214, 162);
     min-height: 20px;
     margin: 20px 4px 40px;
     text-align: center;
+    padding: 20px;
+}
+
+.hidden {
+    display: none;
 }
 
 #flex_container {
