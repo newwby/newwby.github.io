@@ -1,67 +1,113 @@
+@import url("../../tokens.css");
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-}
-
-#portfolioLists {
-    font-family: Arial, sans-serif;
-    font-size:xx-large;
-    padding: 20px;
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
 #container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
 }
 
 #pageHeader, #pageFooter {
-    background-color: cornflowerblue;
-    min-height: 100px;
+    background-color: var(--color-bg-alt);
+    min-height: 72px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--color-text);
+    padding: var(--space-3) var(--space-5);
+}
+
+#pageHeader {
+    justify-content: flex-start;
+    border-bottom: 1px solid var(--color-border);
 }
 
 #pageFooter {
-    min-height: 200px;
+    border-top: 1px solid var(--color-border);
+    min-height: 100px;
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+}
+
+#pageFooter a {
+    color: var(--color-accent);
+}
+
+.back_to_portfolio {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: var(--text-base);
+    padding: var(--space-2) var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.back_to_portfolio:hover {
+    background-color: var(--color-accent-muted);
+    color: var(--color-accent);
+    border-color: var(--color-accent);
 }
 
 #mainBody {
-    flex
-    font-family: Arial, sans-serif;
-    padding: 20px;
+    font-family: var(--font-sans);
+    padding: var(--space-6) var(--space-5);
     flex: 1;
+}
+
+#mainBody h1 {
+    font-size: var(--text-2xl);
+    color: var(--color-text);
 }
 
 #lookup-form {
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 15px;
+    margin-bottom: var(--space-4);
 }
 
 #lookup-button {
-    margin-top: 5px;
+    margin-top: var(--space-2);
 }
 
 #postcode {
-    padding: 8px;
-    font-size: 16px;
+    padding: var(--space-2);
+    font-size: var(--text-base);
     min-width: 300px;
     text-align: center;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-surface);
+    color: var(--color-text);
 }
 
 button {
-    padding: 8px 12px;
-    font-size: 16px;
+    padding: var(--space-2) var(--space-4);
+    font-size: var(--text-base);
+    font-weight: 600;
     cursor: pointer;
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-sm);
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    transition: background-color 0.15s ease;
+}
+
+button:hover {
+    background-color: var(--color-accent-hover);
 }
 
 #resultsDiv {
-    margin-top: 20px;
-   
+    margin-top: var(--space-5);
+    color: var(--color-text);
 }

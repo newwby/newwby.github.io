@@ -1,23 +1,20 @@
-<!-- Originally a CCG/ICB lookup tool developed as front-end practice, this page was entirely developed in VSCode (with local server) -->
-
-<!-- boilerplate -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Integrated Care Board Lookup</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23232A49'/%3E%3Ctext x='32' y='42' font-family='system-ui,Arial,sans-serif' font-size='28' font-weight='700' fill='%23F2B544' text-anchor='middle'%3EDN%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="icb_lookup_style.css">
 </head>
 
-<!-- do stuff below -->
 <body>
     <div id="container">
-        <div id="pageHeader"></div>
+        <div id="pageHeader">
+            <a class="back_to_portfolio" href="../../index.html">&larr; Back to Portfolio</a>
+        </div>
         <div id="mainBody">
-            <!-- header text -->
             <h1>Integrated Care Board Lookup</h1>
-            <!-- inline search bar (text entry field and button attached to js script) -->
             <div id="lookup-form">
                 <input type="text" id="postcode" placeholder="Please enter postcode, e.g. SW1A 2AA">
                 <div id="lookup-button">
@@ -29,7 +26,6 @@
         <div id="pageFooter">
             <div id="creditsBlock">
                 <p>Built by Daniel Newby using postcodes.io</p>
-
             </div>
         </div>
     </div>

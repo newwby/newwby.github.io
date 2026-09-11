@@ -1,55 +1,55 @@
-<!-- boilerplate -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Daniel Newby's software development portfolio.">
+    <meta name="theme-color" content="#12152A">
     <title>Daniel Newby's Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23232A49'/%3E%3Ctext x='32' y='42' font-family='system-ui,Arial,sans-serif' font-size='28' font-weight='700' fill='%23F2B544' text-anchor='middle'%3EDN%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="index.css" type="text/css">
     <script src="index.js" defer></script>
 </head>
 
-<body>  
-  
+<body>
+
   <header>
-    <!-- Navigation bar loads into this div -->
     <div id="navbar_container"></div>
   </header>
 
-  <!-- Main body -->
   <div id="root">
 
-    <div class="construction_element hidden" id="mobile_banner">
-      <p>Limited width (i.e. mobile) functionality for this site has been temporarily disabled, please switch your browser to show desktop view.</p>
+    <div id="body_header_block">
+      <h1>Daniel Newby</h1>
+      <span class="hero_accent_rule" aria-hidden="true"></span>
     </div>
-    
+
     <div id="flex_container">
-      <!-- Main page header goes in here -->
-      <div id="body_header_block">
-        <h1>Daniel Newby</h1>
-        <h2>Welcome to my Portfolio. Scroll to learn more about my work!</h2>
-      </div>
-      <!-- All other content blocks are loaded by JS -->
-
+      <div id="content_grid"></div>
     </div>
 
-  <!-- Root close -->
   </div>
 
-  <!-- load initial elements after DOM finishes building -->
+  <footer class="site_footer">
+    <div class="site_footer_inner">
+      <p class="site_footer_tagline">Thanks for stopping by &mdash; more of my work below.</p>
+      <ul class="site_footer_links">
+        <li><a href="https://github.com/newwby" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://dandoesathing.itch.io/" target="_blank" rel="noopener noreferrer">itch.io</a></li>
+      </ul>
+      <p class="site_footer_copyright">&copy; 2023-2026 Daniel Newby</p>
+    </div>
+  </footer>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
         loadDiv('navbar_container', 'header.html');
-        // if (window.innerWidth < 768) {} else {
+        initNavDropdowns();
         addContentBlock('assets/block_background_1_coding.png', 'Software Developer', 'Experienced with multiple development languages');
-        addContentBlock('assets/block_background_2_data.png', 'Data Analyst', 'Spreadsheet and database capabilities');
-        addContentBlock('assets/block_background_3_gamedev.png', 'Game Developer', 'Multiple completed game projects');
+        addContentBlock('assets/block_background_2_data.png', 'Spreadsheet Specialist', 'Advanced spreadsheet systems for budgeting, tracking and automation');
+        addContentBlock('assets/block_background_3_gamedev.png', 'Game Developer', 'Solo-developed titles shipped on itch.io, built in Godot');
         addContentBlock('assets/block_background_4_figma.png', 'Designer', 'Artistic and design skills');
         addContentBlock('assets/block_background_5_writing.png', 'Writer', 'Published content writer');
-        // }
-    });
-    window.addEventListener('resize', () => {
-      toggleMobileWarning();      
     });
   </script>
 </body>

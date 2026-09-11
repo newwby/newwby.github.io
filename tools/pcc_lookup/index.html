@@ -1,23 +1,20 @@
-<!-- Duplicate of ICB Lookup tool except this connects to an external Vercel-hosted webapp to get prescribing cost centre code (if valid GP practice postcode) -->
- <!-- Basically, GP postcode in and PCC Code out -->
-
-<!-- boilerplate -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prescribing Cost Centre Lookup</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23232A49'/%3E%3Ctext x='32' y='42' font-family='system-ui,Arial,sans-serif' font-size='28' font-weight='700' fill='%23F2B544' text-anchor='middle'%3EDN%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="pcc_lookup_style.css">
 </head>
 
 <body>
     <div id="container">
-        <div id="pageHeader"></div>
+        <div id="pageHeader">
+            <a class="back_to_portfolio" href="../../index.html">&larr; Back to Portfolio</a>
+        </div>
         <div id="mainBody">
-            <!-- header text -->
             <h1>Prescribing Cost Centre Lookup</h1>
-            <!-- inline search bar (text entry field and button attached to js script) -->
             <div id="lookup-form">
                 <input type="text" id="postcode" placeholder="Please enter a valid GP postcode.">
                 <div id="lookup-button">
@@ -25,8 +22,7 @@
                 </div>
             </div>
             <div id="resultsDiv">
-                <!-- Output from <a href="https://pcc-lookup.vercel.app/">https://pcc-lookup.vercel.app/</a> goes here -->
-                 <p><i>Please note the current solution takes some time to resolve requests. Send your request once then wait.</i></p>
+                <p><i>Please note the current solution takes some time to resolve requests. Send your request once then wait.</i></p>
             </div>
         </div>
         <div id="pageFooter">
