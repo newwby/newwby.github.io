@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Demo CRM form for the Event Sales Kit portfolio piece. Nothing is sent.">
+<title>Demo CRM Form</title>
+<style>
+:root{--bg:#eef1f6;--surface:#fff;--ink:#152238;--muted:#5a6680;--line:#d5dbe6;--accent:#c98a00;--accent-ink:#fff;--good:#1f7a5a}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1524;--surface:#172238;--ink:#e7ebf3;--muted:#9aa6bf;--line:#2a3854;--accent:#f2c14e;--accent-ink:#1a1405;--good:#5cc79c;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Segoe UI",system-ui,-apple-system,Arial,sans-serif;padding:24px 16px}
+main{max-width:480px;margin:0 auto}
+h1{font-size:1.5rem;margin:0 0 4px}
+p{margin:0 0 12px;color:var(--muted);font-size:.9rem}
+a{color:inherit}
+form{display:grid;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
+label{display:flex;flex-direction:column;gap:4px;font-size:.82rem;color:var(--muted)}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;width:100%}
+button{font:600 .9rem inherit;font-family:inherit;background:var(--accent);color:var(--accent-ink);border:0;border-radius:8px;padding:10px 14px;cursor:pointer}
+#done{color:var(--good);font-weight:600;min-height:1.4em;margin:0}
+</style>
+</head>
+<body>
+<main>
+  <h1>Acme Ledger: lead form</h1>
+  <p><b>Portfolio demo.</b> This stands in for a real CRM form, and nothing is sent or stored. Fields fill in from the link. Back to the <a href="../">Event Sales Kit</a>.</p>
+  <form id="f">
+    <label>Name<input id="name"></label>
+    <label>Company<input id="company"></label>
+    <label>Email<input id="email" type="email"></label>
+    <label>Chat handle / phone<input id="telegram"></label>
+    <label>Rating<select id="rating"><option value="">Not set</option><option value="hot">Hot</option><option value="warm">Warm</option><option value="cold">Cold</option></select></label>
+    <label id="notesWrap" hidden>Notes<textarea id="notes" rows="5"></textarea></label>
+    <label>Lead source<input id="utm_source" readonly></label>
+    <button type="submit">Save details</button>
+    <p id="done" role="status"></p>
+  </form>
+</main>
+<script>
+(function(){
+  var q=new URLSearchParams(location.search),$=function(i){return document.getElementById(i)};
+  ["name","company","email","telegram","rating","utm_source"].forEach(function(k){if(q.get(k))$(k).value=q.get(k)});
+  if(q.get("team")==="1")$("notesWrap").hidden=false;
+  var m=location.hash.match(/esk=([^&]+)/);
+  if(m){try{var p=JSON.parse(decodeURIComponent(atob(m[1])));if(p.n)$("notes").value=p.n}catch(e){}}
+  $("f").addEventListener("submit",function(e){e.preventDefault();$("done").textContent="Demo only: nothing was sent."});
+})();
+</script>
+</body>
+</html>
