@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#070b18">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="A&amp;I Card">
+  <title>Daniel Newby · A&amp;I Solutions</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <style>
+    :root {
+      --bg: #070b18;
+      --bg-2: #0c1330;
+      --line: #1b2a5c;
+      --text: #eef2ff;
+      --muted: #93a0c8;
+      --cyan: #22d3ee;
+      --blue: #3b82f6;
+      --violet: #8b5cf6;
+      --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; }
+    html, body { height: 100%; background: var(--bg); }
+    body {
+      color: var(--text);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+    .screen {
+      position: relative;
+      min-height: 100dvh;
+      max-width: 480px;
+      margin: 0 auto;
+      padding: max(env(safe-area-inset-top), 28px) 24px max(env(safe-area-inset-bottom), 24px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      background: radial-gradient(120% 70% at 50% 42%, var(--bg-2) 0%, var(--bg) 70%);
+      isolation: isolate;
+    }
+    .circuit {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      z-index: -1; opacity: .55; pointer-events: none;
+    }
+    .brand { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+    .logo {
+      width: 92px; height: 92px; border-radius: 50%;
+      box-shadow: 0 0 28px rgba(34, 211, 238, .25), 0 0 60px rgba(139, 92, 246, .18);
+    }
+    h1 { font-size: 1.6rem; font-weight: 650; letter-spacing: .01em; }
+    .backronym {
+      font-family: var(--mono); font-size: .78rem; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--muted);
+    }
+    .backronym b { color: var(--cyan); font-weight: 700; }
+    .backronym b.v { color: var(--violet); }
+
+    .qr-wrap {
+      position: relative; padding: 2px; border-radius: 22px;
+      background: linear-gradient(135deg, var(--cyan), var(--blue) 50%, var(--violet));
+      box-shadow: 0 0 36px rgba(59, 130, 246, .35);
+    }
+    .qr {
+      display: block; width: min(72vw, 300px); height: auto;
+      background: #fff; border-radius: 20px; padding: 10px;
+      image-rendering: pixelated;
+    }
+    .hint {
+      margin-top: 12px; text-align: center;
+      font-family: var(--mono); font-size: .72rem; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--muted);
+    }
+
+    .person { width: 100%; display: grid; gap: 6px; }
+    .name { font-size: 1.15rem; font-weight: 600; text-align: center; margin-bottom: 4px; }
+    .row {
+      display: flex; align-items: center; gap: 10px;
+      min-height: 44px; padding: 0 14px; border-radius: 12px;
+      border: 1px solid var(--line); background: rgba(12, 19, 48, .6);
+      color: var(--text); text-decoration: none;
+      font-family: var(--mono); font-size: .8rem;
+      overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
+    }
+    .row svg { flex: none; width: 18px; height: 18px; stroke: var(--cyan); fill: none; stroke-width: 1.6; }
+    .row span { overflow: hidden; text-overflow: ellipsis; }
+    .row.email { font-size: clamp(.6rem, 2.75vw, .8rem); padding: 0 12px; }
+    .row:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+    .vcf { text-align: center; font-family: var(--mono); font-size: .7rem; color: var(--muted); }
+    .vcf a { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main class="screen">
+    <svg class="circuit" viewBox="0 0 390 844" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g fill="none" stroke="#1b2a5c" stroke-width="1.2">
+        <path d="M0 120h70l30 30h60"/><path d="M390 90h-80l-26 26h-50"/>
+        <path d="M0 300h40l24-24h40"/><path d="M390 330h-50l-20 20h-46"/>
+        <path d="M30 0v60l20 20"/><path d="M360 0v40l-24 24"/>
+        <path d="M0 560h56l28 28v60"/><path d="M390 600h-64l-22-22h-40"/>
+        <path d="M60 844v-70l26-26h50"/><path d="M330 844v-60l-30-30h-40"/>
+        <path d="M195 844v-40"/><path d="M0 700h30l20-20"/><path d="M390 720h-36l-18 18"/>
+      </g>
+      <g fill="#070b18" stroke="#2a3f7f" stroke-width="1.4">
+        <circle cx="160" cy="150" r="4"/><circle cx="234" cy="116" r="4"/>
+        <circle cx="104" cy="276" r="4"/><circle cx="274" cy="350" r="4"/>
+        <circle cx="50" cy="80" r="3"/><circle cx="336" cy="64" r="3"/>
+        <circle cx="84" cy="648" r="4"/><circle cx="264" cy="578" r="4"/>
+        <circle cx="136" cy="748" r="4"/><circle cx="260" cy="754" r="4"/>
+        <circle cx="195" cy="804" r="3"/><circle cx="50" cy="680" r="3"/><circle cx="336" cy="738" r="3"/>
+      </g>
+    </svg>
+
+    <header class="brand">
+      <img class="logo" src="logo.png" alt="" width="92" height="92">
+      <h1>A&amp;I Solutions</h1>
+      <p class="backronym"><b>A</b>utomation &amp; <b class="v">I</b>ntegration</p>
+    </header>
+
+    <section aria-label="Contact QR code">
+      <div class="qr-wrap">
+        <img class="qr" src="qr.png" width="300" height="300"
+             alt="QR code containing Daniel Newby's contact card">
+      </div>
+      <p class="hint">Scan to save contact</p>
+    </section>
+
+    <section class="person">
+      <p class="name">Daniel Newby</p>
+      <a class="row email" href="mailto:automation-integration-solutions@proton.me">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        <span>automation-integration-solutions@proton.me</span>
+      </a>
+      <a class="row" href="tel:+447469213878">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+        <span>07469 213878</span>
+      </a>
+      <a class="row" href="https://www.linkedin.com/in/daniel-newby-603000313/" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>
+        <span>linkedin.com/in/daniel-newby</span>
+      </a>
+      <p class="vcf"><a href="daniel-newby.vcf" download>Download contact (.vcf)</a></p>
+    </section>
+  </main>
+</body>
+</html>
